@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Kitty adoption form</title>
+  <link rel="stylesheet" href="styles.css" type="text/css">
+  <script src="info-button.js"></script>
+</head>
+
+<body>
+  <div id='main-content'>
+    <h1 style="margin:0">Kitty adoption form</h1>
+    <div>Sponsored by chatGPT</div>
+
+    <h3 style="margin-bottom:0">Form status:</h3>
+    <button onclick="toggleColor()" id='status-button'>Pending</button>
+
+    <h2>Choose your favorite kitten:</h2>
+    <div class="radio-options">
+      <div class="radio-option">
+        <input type="radio" id="cowboy" name="kitten" value="cowboy">
+        <label for="cowboy">
+          <img src="assets/cowboy.jpeg" alt="Cowboy">
+          Cowboy kitty
+        </label>
+      </div>
+      <div class="radio-option">
+        <input type="radio" id="sombrero" name="kitten" value="sombrero">
+        <label for="sombrero">
+          <img src="assets/sombrero.webp" alt="Sombrero">
+          Sombrero kitty
+        </label>
+      </div>
+      <div class="radio-option">
+        <input type="radio" id="grumpy" name="kitten" value="grumpy">
+        <label for="grumpy">
+          <img src="assets/grumpy.jpeg" alt="grumpy">
+          Grumpy kitty
+        </label>
+      </div>
+    </div>
+    <div>
+      <button id="sumbit-btn" onclick="toggleOtherVisibility()">
+        <svg viewBox="0 0 20 20" style="fill:currentColor">
+          <path
+            d="M10.6667 2.66667H12.6667C13.0667 2.66667 13.3333 2.93334 13.3333 3.33334V4.66667H12.6667H3.33332H2.66666V3.33334C2.66666 2.93334 2.93332 2.66667 3.33332 2.66667H5.33332V2C5.33332 1.6 5.59999 1.33334 5.99999 1.33334H9.99999C10.4 1.33334 10.6667 1.6 10.6667 2V2.66667ZM4.00001 14.6667C3.60001 14.6667 3.33334 14.4 3.33334 14V5.33334H12.6667V14C12.6667 14.4 12.4 14.6667 12 14.6667H4.00001ZM11.3333 6.66667H10V13.3333L11.3333 12.6667V6.66667ZM8.66668 6.66667H7.33334V13.3333L8.66668 12.6667V6.66667ZM6.00001 6.66667H4.66668V13.3333L6.00001 12.6667V6.66667Z" />
+        </svg>
+        <span>Adopt!</span>
+      </button>
+      <div id="myOtherDiv" style="display: none">No kitty for you :(</div>
+    </div>
+    <div>
+      <button id="info-btn" onclick="toggleVisibility()">More info</button>
+    </div>
+  </div>
+  <div>Feedback on the design of this beautiful page is not allowed</div>
+  <div id="myDiv">
+    <h1>More information not available, try again later</h1>
+  </div>
+
+  <script>
+    const myDiv = document.getElementById("myDiv");
+    const myOtherDiv = document.getElementById("myOtherDiv");
+    const mainContent = document.getElementById("main-content");
+
+    function toggleVisibility() {
+      myDiv.style.display = "block";
+      mainContent.style.display = "none";
+    }
+    function toggleOtherVisibility() {
+      myOtherDiv.style.display = "block";
+    }
+  </script>
+</body>
+
+</html>

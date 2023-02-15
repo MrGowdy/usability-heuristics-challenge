@@ -1,0 +1,77 @@
+#myDiv {
+  display: none;
+}
+
+#sumbit-btn {
+  margin-top: 1rem;
+  background-color: green;
+  padding:1rem;
+  font-size: 1.75rem;
+  color: white;
+}
+
+#status-button {
+  background-color: Red;
+  padding:1rem;
+  font-size: 2rem;
+  font-weight: bold;
+  border-radius: 0.25rem;
+  padding: 10px 20px;
+  color: white;
+  border: none;
+}
+
+#info-btn {
+  margin-top: 2rem;
+  padding: 1rem 2rem;
+  font-size: 1.5rem;
+  background-color: blue;
+  color: white;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+
+#main-content {
+  margin: 1rem;
+  padding: 2rem 3rem;
+  align-items: center;
+  border: 10px ridge blue;
+  border-radius: 0.5rem;
+  background-color: lightblue;
+}
+
+.radio-options {
+  display: flex;
+  flex-direction: row;
+}
+
+.radio-option {
+  display: flex;
+  align-items: center;
+  margin-right: 10px;
+}
+
+.radio-option input[type="radio"] {
+  display: none;
+}
+
+.radio-option label {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  flex-direction: column;
+}
+
+.radio-option img {
+  width: 20rem;
+  height: 20rem;
+  margin-right: 10px;
+}
+
+.radio-option input[type="radio"]:checked+label {
+  font-weight: bold;
+  border: 2px black solid;
+  padding: 1rem;
+  border-radius: 0.5rem;
+}
